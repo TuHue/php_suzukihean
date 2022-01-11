@@ -38,7 +38,7 @@ body {
 
 section,
 .container {
-    padding: 2rem 9%;
+    padding: 2rem 5%;
 }
 
 .wrapper {
@@ -54,7 +54,11 @@ h5 {
     font-size: 4rem;
     text-transform: uppercase;
     color: var(--blue-4);
-    margin: 50px 0 0 0;
+    margin: 15px 0 0 0;
+}
+
+a {
+    text-decoration: none;
 }
 
 .padding-1 {
@@ -191,6 +195,7 @@ h5 {
 
 .tag--item {
     font-size: 1.5rem;
+    text-decoration: none;
     font-weight: bold;
     position: relative;
     color: var(--blue-4);
@@ -201,11 +206,12 @@ h5 {
 }
 
 .tag--text--active {
-    color: var(--red-1);
+    color: var(--red-1) !important;
 }
 
 .tag--text {
     cursor: pointer;
+    color: var(--blue-4);
 }
 
 .header {
@@ -526,7 +532,7 @@ h5 {
 .services__title h2 {
     font-size: 3.5rem;
     text-transform: uppercase;
-    margin: 0 20% 0 20%;
+    margin: 0 20% 20px 20%;
 }
 
 .services__content-header {

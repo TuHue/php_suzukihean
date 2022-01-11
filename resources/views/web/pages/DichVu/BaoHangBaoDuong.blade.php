@@ -3,7 +3,7 @@
 <div class="home-1" style="background-image: url('{{ URL::asset('web/img/background/banner.png') }}')"></div>
 <div class="detail-1">
     <div class="container">
-        <p>Home > Cửa Hàng > Suzuki XL7</p>
+        <p>Dịch vụ > Bảo dưởng, bảo hành</p>
     </div>
 </div>
 <div class="services">
@@ -187,86 +187,46 @@
 
 <div class="detail-6 detail-6-news ">
     <div class="detail-6_cars ">
+        @foreach ( $productXeTais as $productXeTai )
         <div class="detail-6_cars--item detail-6-news--item ">
-            <img src=" {{ URL::asset('web/img/carts/car1.png')}}" alt=" " />
+            <img src=" {{ $productXeTai->image }}" alt=" " style="width: 100%; height: 200px"/>
             <div class="detail-6_cars--infor ">
-                <h2>SUZUKI SWIFT</h2>
-                <p>249.300.000 đ</p>
-            </div>
-            <div class="see-more ">
-                <a href=" ">Xem thêm</a>
-            </div>
-        </div>
+                <h2>{{ $productXeTai->name }}</h2>
+                <p>{{ number_format($productXeTai->price, 0, '', ',') }}</p>
+                <div class="detail-6_cars--line"></div>
 
-        <div class="detail-6_cars--item detail-6-news--item ">
-            <img src="{{ URL::asset('web/img/carts/car1.png')}}" alt=" " />
-            <div class="detail-6_cars--infor ">
-                <h2>SUZUKI SWIFT</h2>
-                <p>249.300.000 đ</p>
             </div>
             <div class="see-more ">
-                <a href=" ">Xem thêm</a>
+                <a href="/cua-hang/xe-tai/{{ $productXeTai->id }} ">Xem thêm</a>
             </div>
         </div>
+        @endforeach
+       
 
-        <div class="detail-6_cars--item detail-6-news--item ">
-            <img src="{{ URL::asset('web/img/carts/car1.png')}}" alt=" " />
-            <div class="detail-6_cars--infor ">
-                <h2>SUZUKI SWIFT</h2>
-                <p>249.300.000 đ</p>
-            </div>
-            <div class="see-more ">
-                <a href=" ">Xem thêm</a>
-            </div>
-        </div>
-
-        <div class="detail-6_cars--item detail-6-news--item ">
-            <img src="{{ URL::asset('web/img/carts/car1.png')}}" alt=" " />
-            <div class="detail-6_cars--infor ">
-                <h2>SUZUKI SWIFT</h2>
-                <p>249.300.000 đ</p>
-            </div>
-            <div class="see-more ">
-                <a href=" ">Xem thêm</a>
-            </div>
-        </div>
+     
     </div>
-</div> <div class="news-promotion">
+</div> 
+<div class="news-promotion">
     <div class="container">
         <div class="news-promotion__title">
             <h3>TIN TỨC KHUYẾN MÃI</h3>
         </div>
         <div class="news-promotion__list">
+            @foreach ($news as $new)
             <div class="news-promotion__item">
                 <div class="news-promotion__item--title">
-                    <a href="/tin-tuc/chi-tiet-tin-tuc">
-                        <h5>MẪU XE ĐEP NHẤT NĂM 2020 MẪU XE ĐEP NHẤT NĂM 2020 MẪU XE ĐEP</h5>
+                    <a href="/tin-tuc/chi-tiet-tin-tuc/{{ $new->id }}">
+                        <h5>
+                            {{ $new->name }}
+                        </h5>
                     </a>
                 </div>
                 <div class="news-promotion__item--date">
-                    <p>14-12-2021 07:01</p>
+                    <p>{{ $new->created_at }}</p>
                 </div>
             </div>
-            <div class="news-promotion__item">
-                <div class="news-promotion__item--title">
-                    <a href="/tin-tuc/chi-tiet-tin-tuc">
-                        <h5>MẪU XE ĐEP NHẤT NĂM 2020 MẪU XE ĐEP NHẤT NĂM 2020 MẪU XE ĐEP</h5>
-                    </a>
-                </div>
-                <div class="news-promotion__item--date">
-                    <p>14-12-2021 07:01</p>
-                </div>
-            </div>
-            <div class="news-promotion__item">
-                <div class="news-promotion__item--title">
-                    <a href="/tin-tuc/chi-tiet-tin-tuc">
-                        <h5>MẪU XE ĐEP NHẤT NĂM 2020 MẪU XE ĐEP NHẤT NĂM 2020 MẪU XE ĐEP</h5>
-                    </a>
-                </div>
-                <div class="news-promotion__item--date">
-                    <p>14-12-2021 07:01</p>
-                </div>
-            </div>
+            @endforeach
+           
         </div>
     </div>
 </div>

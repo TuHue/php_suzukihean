@@ -17,7 +17,10 @@
         <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
             <div class="navbar-brand-wrapper d-flex justify-content-center">
                 <div class="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center w-100">
-                    <a class="navbar-brand brand-logo d-flex justify-content-between align-items-center" href="../../index.html"><h5 style="color:white">Quản Lý OTo</h5></a>
+                    <a class="navbar-brand brand-logo d-flex justify-content-between align-items-center"
+                        href="../../index.html">
+                        <h5 style="color:white">Quản Lý OTo</h5>
+                    </a>
                     <button class="navbar-toggler navbar-toggler align-self-center" type="button"
                         data-toggle="minimize">
                         <span class="typcn typcn-th-menu"></span>
@@ -359,15 +362,19 @@
                         <div class="collapse" id="quan-ly-xe">
                             <ul class="nav flex-column sub-menu">
                                 <li class="nav-item"> <a class="nav-link"
-                                        href="../../pages/ui-features/buttons.html">Buttons</a></li>
+                                        href="../../pages/ui-features/buttons.html">Loại Xe</a></li>
                                 <li class="nav-item"> <a class="nav-link"
-                                        href="../../pages/ui-features/dropdowns.html">Dropdowns</a></li>
+                                        href="../../pages/ui-features/dropdowns.html">Thương Hiệu</a></li>
                                 <li class="nav-item"> <a class="nav-link"
-                                        href="../../pages/ui-features/typography.html">Typography</a></li>
+                                        href="../../pages/ui-features/typography.html">Đời Xe</a></li>
+                                <li class="nav-item"> <a class="nav-link"
+                                        href="../../pages/ui-features/typography.html">Xe</a></li>
+                                <li class="nav-item"> <a class="nav-link"
+                                        href="../../pages/ui-features/typography.html">Nhập xuất</a></li>
                             </ul>
                         </div>
                     </li>
-                    
+
                     <li class="nav-item">
                         <a class="nav-link" data-toggle="collapse" href="#quan-ly-khach-hang" aria-expanded="false"
                             aria-controls="quan-ly-khach-hang">
@@ -377,12 +384,11 @@
                         </a>
                         <div class="collapse" id="quan-ly-khach-hang">
                             <ul class="nav flex-column sub-menu">
-                                <li class="nav-item"> 
-                                    <a class="nav-link"  href="../../pages/ui-features/buttons.html">Buttons</a></li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../../pages/ui-features/buttons.html">Loại khách hàng</a>
+                                </li>
                                 <li class="nav-item"> <a class="nav-link"
-                                        href="../../pages/ui-features/dropdowns.html">Dropdowns</a></li>
-                                <li class="nav-item"> <a class="nav-link"
-                                        href="../../pages/ui-features/typography.html">Typography</a></li>
+                                        href="../../pages/ui-features/dropdowns.html">Khách hàng</a></li>
                             </ul>
                         </div>
                     </li>
@@ -396,11 +402,25 @@
                         <div class="collapse" id="quan-ly-don-hang">
                             <ul class="nav flex-column sub-menu">
                                 <li class="nav-item"> <a class="nav-link"
-                                        href="../../pages/ui-features/buttons.html">Buttons</a></li>
+                                        href="../../pages/ui-features/buttons.html">Tạo đơn</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="collapse" href="#quan-ly-phu-tung" aria-expanded="false"
+                            aria-controls="quan-ly-phu-tung">
+                            <i class="typcn typcn typcn-folder menu-icon"></i>
+                            <span class="menu-title">Phụ tùng</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                        <div class="collapse" id="quan-ly-phu-tung">
+                            <ul class="nav flex-column sub-menu">
                                 <li class="nav-item"> <a class="nav-link"
-                                        href="../../pages/ui-features/dropdowns.html">Dropdowns</a></li>
+                                        href="../../pages/ui-features/buttons.html">Loại phụ tùng</a></li>
                                 <li class="nav-item"> <a class="nav-link"
-                                        href="../../pages/ui-features/typography.html">Typography</a></li>
+                                        href="../../pages/ui-features/buttons.html">Phụ tùng</a></li>
+                                <li class="nav-item"> <a class="nav-link"
+                                        href="../../pages/ui-features/buttons.html">Nhập xuất</a></li>
                             </ul>
                         </div>
                     </li>

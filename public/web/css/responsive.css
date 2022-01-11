@@ -774,7 +774,7 @@
         }
         .services__content-header--item p {
             text-align: center;
-            font-size: .75rem;
+            font-size: 1rem !important;
         }
         .tableofcontents {
             width: 300px;

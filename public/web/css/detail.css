@@ -33,6 +33,7 @@
 
 .detail-2__content--detail img {
     width: 80%;
+    height: 500px;
     margin: 30px auto;
 }
 
@@ -46,9 +47,6 @@
 
 .detail-2__content--detail p {
     font-size: 3rem;
-    position: absolute;
-    bottom: 0;
-    left: 45%;
 }
 
 .detail-2__content--carts {
@@ -61,6 +59,10 @@
     padding: 1rem;
     border: 2px solid var(--black-2);
     margin: 1rem;
+}
+
+.detail-2__content--cart img {
+    width: 200px;
 }
 
 .detail-2__content--logo {
@@ -135,10 +137,14 @@
 }
 
 .detail-3__content {
-    width: 100%;
+    width: 65%;
     background-color: var(--white-1);
-    height: 100px;
     border-radius: 3px;
+    margin: 0 auto;
+}
+
+.detail-3__content--item {
+    display: none;
 }
 
 .detail-4 {
@@ -284,19 +290,29 @@
     padding: 2rem;
     margin: 1rem;
     overflow: hidden;
+    position: relative;
 }
 
 .detail-6_cars--infor {
     float: right;
-    position: relative;
 }
 
-.detail-6_cars--infor::before {
+
+/* .detail-6_cars--infor::before {
     content: "";
     position: absolute;
     top: 50%;
-    left: -200%;
-    width: 250px;
+    left: -00%;
+    width: 200px;
+    height: 1px;
+    background-color: var(--black-1);
+} */
+
+.detail-6_cars--line {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    width: 200px;
     height: 1px;
     background-color: var(--black-1);
 }
@@ -357,4 +373,8 @@
     padding: 1rem 2rem;
     color: var(--white-1);
     border-radius: 30px;
+}
+
+#kich-thuc-trong-tai {
+    display: block;
 }

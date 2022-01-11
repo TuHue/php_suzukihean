@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link id="favicon" rel="shortcut icon" href="{{ URL::to('web/img/logo/2000pxsuzukilogo2-8501.png') }}" type="image/x-icon" />
     <title>ô tô</title>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
@@ -13,111 +14,14 @@
     <link rel="stylesheet" href="{{ URL::to('web/css/detail.css') }}" />
     <link rel="stylesheet" href="{{ URL::to('web/css/detail_xetai.css') }}" />
     <link rel="stylesheet" href="{{ URL::to('web/css/responsive.css') }} " />
-    <link rel="stylesheet" href="{{ URL::to('assets/css/news.css') }} " />
-    <link rel="stylesheet" href="{{ URL::to('assets/css/services_xetail.css') }}" />
+    <link rel="stylesheet" href="{{ URL::to('web/css/news.css') }} " />
+    <link rel="stylesheet" href="{{ URL::to('web/css/services_xetail.css') }}" />
     @yield('style')
 </head>
 
 <body>
     <div class="wrapper">
-        <header class="header padding-1">
-            <div class="header-nav">
-                <nav class="header-nav__list">
-                    <li class="header-nav__item header-nav__item--shop">
-                        <a href="/cua-hang">cửa hàng
-                            <i class="fas fa-chevron-right"></i>
-                            <i class="fas fa-chevron-down"></i>
-                        </a>
-                        <div class="header-nav-item__car">
-                            <div class="header-nav-item__cars">
-                                <h5>Xe du lịch</h5>
-                                <div class="header-nav-item__cars--list">
-                                    <div class="header-nav-item__cars--item">
-                                        <img src="web/img/carts/swift1.png" alt="" />
-                                        <p>Suzuki XL7</p>
-                                    </div>
-                                    <div class="header-nav-item__cars--item">
-                                        <img src="web/img/carts/slice-car1.png" alt="" />
-                                        <p>Suzuki XL7</p>
-                                    </div>
-                                    <div class="header-nav-item__cars--item">
-                                        <img src="web/img/carts/enriga1.png" alt="" />
-                                        <p>Suzuki XL7</p>
-                                    </div>
-                                    <div class="header-nav-item__cars--item">
-                                        <img src="web/img/carts/ciaz1.png" alt="" />
-                                        <p>Suzuki XL7</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="header-nav-item__cars">
-                                <h5>Xe du lịch</h5>
-                                <div class="header-nav-item__cars--list">
-                                    <div class="header-nav-item__cars--item">
-                                        <img src="web/img/carts/transportVehicle7.png" alt="" />
-                                        <p>Suzuki XL7</p>
-                                    </div>
-                                    <div class="header-nav-item__cars--item">
-                                        <img src="web/img/carts/transportVehicle8.png" alt="" />
-                                        <p>Suzuki XL7</p>
-                                    </div>
-                                    <div class="header-nav-item__cars--item">
-                                        <img src="web/img/carts/transportVehicle6.png" alt="" />
-                                        <p>Suzuki XL7</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="header-nav__item"><a href="news.html">tin tức</a></li>
-                    <li class="header-nav__item"><a href="">khuyến mãi</a></li>
-                    <li class="header-nav__item"><a href="/dich-vu/bao-hanh-bao-duong">dịch vụ</a></li>
-                </nav>
-            </div>
-            <div class="header-logo">
-                <div class="header-logo__img">
-                    <img src="web/img/logo/suzuki-logo.png" alt="" />
-                </div>
-            </div>
-            <div class="header-infor">
-                <p class="header-infor__contact">
-                    Liên hệ: <strong>0963 998 456</strong>
-                </p>
-                <div class="header-infor__logo">
-                    <span>SUZUKi Vinh</span><img src="{{ URL::asset('web/img/logo/Rectangle 4.png') }}" alt="" />
-                </div>
-            </div>
-        </header>
-        <header class="header-mini">
-            <div class="header-mini__logo">
-                <div class="header-mini__logo--img">
-                    <img src="web/img/logo/suzuki-logo.png" alt="" />
-                    <div class="header-mini__logo--icon">
-                        <button class="btn" id="btn--fa-bars">
-                            <i class="fas fa-bars"></i>
-                        </button>
-                        <button class="btn" id="btn--fa-times">
-                            <i class="fas fa-times"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <nav class="header-mini__nav" id="header-mini__nav">
-                <li class="header-mini__nav--item"><a href="index.html">Cửa hàng</a></li>
-                <li class="header-mini__nav--item"><a href="">tin tức</a></li>
-                <li class="header-mini__nav--item"><a href="">khuyến mãi</a></li>
-                <li class="header-mini__nav--item"><a href="services_maintenance.html">dịch vụ</a></li>
-                <li class="header-mini__nav--item header-mini__nav--item--contact">
-                    <p class="header-infor__contact">
-                        Liên hệ: <strong>0963 998 456</strong>
-                    </p>
-                    <div class="header-infor__logo">
-                        <span>SUZUKi Vinh</span>
-                        <img src="web/img/logo/Rectangle 4.png" alt="" />
-                    </div>
-                </li>
-            </nav>
-        </header>
+        @include('web.component.header')
         @yield('content')
         <div class="footer">
             <div class="footer-header">

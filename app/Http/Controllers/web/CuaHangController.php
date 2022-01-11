@@ -3,6 +3,9 @@
 namespace App\Http\Controllers\web;
 
 use App\Http\Controllers\Controller;
+use App\Models\common\Product;
+use App\Models\common\ProductCategory;
+use App\Models\common\Feedback;
 use Illuminate\Http\Request;
 
 class CuaHangController extends Controller
@@ -10,14 +13,22 @@ class CuaHangController extends Controller
     //
     public function getCuaHang()
     {
-        return view('web.pages.CuaHang.CuaHang');
+        $products = Product::select()->get();
+        $feedbacks = Feedback::select()->where('status', '=',1)->orderBy('id', 'desc')->take(4)->get();
+        return view('web.pages.CuaHang.CuaHang',compact('products','feedbacks'));
     }
-    public  function getOto()
+    public  function getOto($id)
     {
-        return view('web.pages.CuaHang.Oto');
+        $product = Product::findOrFail($id);
+        $productOtos = Product::select()->where('category_id','=',90)->take(3)->get();
+        $productXeTais = Product::select()->where('category_id','=',91)->take(4)->get();
+        return view('web.pages.CuaHang.Oto',compact('product','productOtos','productXeTais'));
     }
-    public function getXeTai()
+    public function getXeTai($id)
     {
-        return view('web.pages.CuaHang.XeTai');
+        $product = Product::findOrFail($id);
+        $productOtos = Product::select()->where('category_id','=',90)->take(3)->get();
+        $productXeTais = Product::select()->where('category_id','=',91)->take(4)->get();
+        return view('web.pages.CuaHang.XeTai',compact('product','productOtos','productXeTais'));
     }
 }

@@ -22,7 +22,8 @@ class Feedback extends Model
         'phone',
         'time_service',
         'image',
-        'status'
+        'status',
+        'product_id'
     ];
 
 
@@ -72,5 +73,9 @@ class Feedback extends Model
             $result = $list;
         }
         return $result;
+    }
+    public function product()
+    {
+        return $this->hasOne(Product::class, 'id', 'product_id');
     }
 }

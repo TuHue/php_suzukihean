@@ -26,8 +26,8 @@ Route::group(['prefix'=>' '],function(){
 
     Route::group(['prefix'=>'cua-hang'],function(){
         Route::get("/",[CuaHangController::class,'getCuaHang'])->name('web.CuaHang.getCuaHang');
-        Route::get("/o-to",[CuaHangController::class,'getOto'])->name('web.CuaHang.getOto');
-        Route::get("/xe-tai",[CuaHangController::class,'getXeTai'])->name('web.CuaHang.getXeTai');
+        Route::get("/o-to/{id}",[CuaHangController::class,'getOto'])->name('web.CuaHang.getOto');
+        Route::get("/xe-tai/{id}",[CuaHangController::class,'getXeTai'])->name('web.CuaHang.getXeTai');
     });
 
     Route::group(['prefix' => 'dich-vu'],function(){
@@ -39,7 +39,9 @@ Route::group(['prefix'=>' '],function(){
 
     Route::group(['prefix' =>'tin-tuc'],function(){
         Route::get('/danh-sach-tin-tuc',[TinTucController::class,'getDanhSachTinTuc'])->name('web.TinTuc.getDanhSachTinTuc');
-        Route::get('/chi-tiet-tin-tuc',[TinTucController::class,'getChiTietTinTuc'])->name('web.TinTuc.getChiTietTinTuc');
+        Route::get('/chi-tiet-tin-tuc/{id}',[TinTucController::class,'getChiTietTinTuc'])->name('web.TinTuc.getChiTietTinTuc');
+        Route::post('/binh-luan',[TinTucController::class,'postBinhLuan'])->name('web.TinTuc.postBinhLuan');
+    
     });
     
     Route::group(['prefix' =>'khuyen-mai'],function(){

@@ -152,12 +152,12 @@
 </div>
 <div class="home-2">
     <div class="ratings">
+        @foreach ($feedbacks as $feedback )
         <div class="ratings__item">
             <div class="ratings__item--title">
                 <div class="ratings__item--avatar">
-                    <img src="web/img/face/52231994-studio-shot-of-young-man-looking-at-the-camera-isolated-on-white-background-horizontal-format-he-has.webp"
-                        alt="" />
-                    <p>Jin Ben</p>
+                    <img src="{{ $feedback->image }}" alt="" />
+                    <p>{{ $feedback->name }}</p>
                 </div>
                 <div class="ratings__item--start">
                     <i class="fas fa-star"></i>
@@ -168,83 +168,15 @@
                 </div>
             </div>
             <div class="ratings__item--content">
-                <h5>Phân loại xe: <span>Xe Swift</span></h5>
+                <h5>Phân loại xe: <span>Xe {{ $feedback->product->name }}</span></h5>
                 <p>
-                    Xe vừa nhỏ xinh, em thấy di chuyển trên đường phố hay ra vào ngõ đều rất dễ dàng. Mức giá
-                    thì phù hợp với điều kiện kinh tế của em và gia đình
+                    {{ $feedback->description }}
                 </p>
             </div>
-            <p class="ratings__item--date">01-06-2010 17:30</p>
+            <p class="ratings__item--date">{{ $feedback->created_at }}</p>
         </div>
-        <div class="ratings__item">
-            <div class="ratings__item--title">
-                <div class="ratings__item--avatar">
-                    <img src="web/img/face/download.jpg" alt="" />
-                    <p>Jin Ben</p>
-                </div>
-                <div class="ratings__item--start">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                </div>
-            </div>
-            <div class="ratings__item--content">
-                <h5>Phân loại xe: <span>Xe Swift</span></h5>
-                <p>
-                    Xe vừa nhỏ xinh, em thấy di chuyển trên đường phố hay ra vào ngõ đều rất dễ dàng. Mức giá
-                    thì phù hợp với điều kiện kinh tế của em và gia đình
-                </p>
-            </div>
-            <p class="ratings__item--date">01-06-2010 17:30</p>
-        </div>
-        <div class="ratings__item">
-            <div class="ratings__item--title">
-                <div class="ratings__item--avatar">
-                    <img src="web/img/face/images.jpg" alt="" />
-                    <p>Jin Ben</p>
-                </div>
-                <div class="ratings__item--start">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                </div>
-            </div>
-            <div class="ratings__item--content">
-                <h5>Phân loại xe: <span>Xe Swift</span></h5>
-                <p>
-                    Xe vừa nhỏ xinh, em thấy di chuyển trên đường phố hay ra vào ngõ đều rất dễ dàng. Mức giá
-                    thì phù hợp với điều kiện kinh tế của em và gia đình
-                </p>
-            </div>
-            <p class="ratings__item--date">01-06-2010 17:30</p>
-        </div>
-        <div class="ratings__item">
-            <div class="ratings__item--title">
-                <div class="ratings__item--avatar">
-                    <img src="web/img/face/images (1).jpg" alt="" />
-                    <p>Jin Ben</p>
-                </div>
-                <div class="ratings__item--start">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                </div>
-            </div>
-            <div class="ratings__item--content">
-                <h5>Phân loại xe: <span>Xe Swift</span></h5>
-                <p>
-                    Xe vừa nhỏ xinh, em thấy di chuyển trên đường phố hay ra vào ngõ đều rất dễ dàng. Mức giá
-                    thì phù hợp với điều kiện kinh tế của em và gia đình
-                </p>
-            </div>
-            <p class="ratings__item--date">01-06-2010 17:30</p>
-        </div>
+        @endforeach
+
     </div>
 </div>
 <div class="home-3">
@@ -283,56 +215,27 @@
         <h5 class="h-5">Xe ô tô nhỏ cho tương lại lớn</h5>
         <div class="tags">
             <div class="tag--item">
-                <span class="tag--text tag--text--active">Cửa hàng</span>
+                <a href="/" class="tag--text tag--text--active">Cửa hàng</a>
                 <span class="tag--line">|</span>
             </div>
             <div class="tag--item">
-                <span class="tag--text">Tin tức</span>
+                <a href="/tin-tuc/danh-sach-tin-tuc" class="tag--text">Tin tức</a>
                 <span class="tag--line">|</span>
             </div>
             <div class="tag--item">
-                <span class="tag--text">Khuyến mãi</span>
+                <a href="/khuyen-mai/danh-sach-khuyen-mai" class="tag--text">Khuyến Mãi</a>
             </div>
         </div>
     </div>
     <div class="home-4__content">
         <div class="home-4__cars">
-            <div class="home-4__car" style="background-image: url('web/img/carts/homecar1.png')">
-                <h4 class="home-4__car--name">XL7</h4>
-                <a href="/cua-hang/o-to" class="home-4__car--link">Xem thêm</a>
+            @foreach ($products as $product )
+            <div class="home-4__car" style="background-image: url({{ $product->image }})">
+                <h4 class="home-4__car--name">{{ $product->name }}</h4>
+                <a href="/cua-hang/o-to/{{ $product->id }}" class="home-4__car--link">Xem thêm</a>
             </div>
-            <div class="home-4__car" style="background-image: url('web/img/carts/homecar2.png')">
-                <h4 class="home-4__car--name">SWIFT</h4>
-                <a href="/cua-hang/o-to" class="home-4__car--link">Xem thêm</a>
-            </div>
-            <div class="home-4__car" style="background-image: url('web/img/carts/homecar3.png')">
-                <h4 class="home-4__car--name">CIAZ</h4>
-                <a href="/cua-hang/o-to" class="home-4__car--link">Xem thêm</a>
-            </div>
-            <div class="home-4__car" style="
-        background-image: url('web/img/carts/transportVehicle2.png');
-      ">
-                <h4 class="home-4__car--name">ERTIGA</h4>
-                <a href="/cua-hang/xe-tai" class="home-4__car--link">Xem thêm</a>
-            </div>
-            <div class="home-4__car" style="
-        background-image: url('web/img/carts/transportVehicle3.png');
-      ">
-                <h4 class="home-4__car--name">CARRY PRO</h4>
-                <a href="/cua-hang/xe-tai" class="home-4__car--link">Xem thêm</a>
-            </div>
-            <div class="home-4__car" style="
-        background-image: url('web/img/carts/transportVehicle4.png');
-      ">
-                <h4 class="home-4__car--name">CARRY TRUCK</h4>
-                <a href="/cua-hang/xe-tai" class="home-4__car--link">Xem thêm</a>
-            </div>
-            <div class="home-4__car" style="
-        background-image: url('web/img/carts/transportVehicle1.png');
-      ">
-                <h4 class="home-4__car--name">CARRY VAN</h4>
-                <a href="/cua-hang/xe-tai" class="home-4__car--link">Xem thêm</a>
-            </div>
+            @endforeach
+
         </div>
     </div>
 </div>
@@ -342,30 +245,30 @@
         <p>"Sẵn sàng cho khởi đầu mới - Suzuki XL7"</p>
     </div>
     <div class="home-5_context">
-        <div class="home-5_context-item">
+        <a href="/dich-vu/bao-hanh-bao-duong" class="home-5_context-item">
             <img src="web/img/services/sevice1.png" alt="" />
             <div class="home-5_context-item--content">
                 <p>BẢO HÀNH, BẢO DƯỠNG</p>
             </div>
-        </div>
-        <div class="home-5_context-item">
+        </a>
+        <a href="/dich-vu/sua-chua-xe-suzuki" class="home-5_context-item">
             <img src="web/img/services/sevice2.png" alt="" />
             <div class="home-5_context-item--content">
                 <p>SỬA CHỮA XE SUZUKI</p>
             </div>
-        </div>
-        <div class="home-5_context-item">
+        </a>
+        <a href="dich-vu/dong-thung-xe-tai" class="home-5_context-item">
             <img src="web/img/services/sevice3.png" alt="" />
             <div class="home-5_context-item--content">
                 <p>ĐÓNG THÙNG XE TẢI</p>
             </div>
-        </div>
-        <div class="home-5_context-item">
+        </a>
+        <a href="dich-vu/phu-thung-xe-suzuki" class="home-5_context-item">
             <img src="web/img/services/sevice4.png" alt="" />
             <div class="home-5_context-item--content">
                 <p>PHỤ TÙNG XE SUZUKI</p>
             </div>
-        </div>
+        </a>
     </div>
 </section>
 @endsection()
