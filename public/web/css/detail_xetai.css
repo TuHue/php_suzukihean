@@ -1,0 +1,97 @@
+.detail-4__top {
+    margin: 3rem;
+}
+
+.detail-4__top--content {
+    margin-top: 2rem;
+}
+
+.detail-4__top--content--right {
+    padding: 2rem;
+}
+
+.detail-4__top--content--left {
+    position: relative;
+    padding: 2rem;
+}
+
+.detail-4__top--content--left img {
+    width: 800px;
+}
+
+.detail-4__top--content--left::before {
+    position: absolute;
+    bottom: -10px;
+    left: 10%;
+    content: "";
+    width: 60%;
+    height: 500px;
+    border: 2px solid var(--white-1);
+}
+
+.detail-4__extra {
+    color: var(--white-1);
+    margin-left: 10rem;
+}
+
+.detail-4__extra h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+.detail-4__extra h2 {
+    width: 300px;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    padding: 1rem;
+    color: var(--blue-4);
+    background-color: var(--white-1);
+    margin: 1rem 1rem 1rem 0;
+    font-weight: bold;
+}
+
+.detail-4__center--item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 3rem 0;
+}
+
+.detail-4__bottom {
+    position: relative;
+    height: 50vh;
+}
+
+.detail-4__bottom--title {
+    color: var(--white-1);
+    position: relative;
+}
+
+.detail-4__bottom--title h2 {
+    font-size: 4rem;
+}
+
+.detail-4__bottom--title p {
+    margin-top: 3rem;
+}
+
+.detail-4__bottom--title::before {
+    position: absolute;
+    content: "";
+    top: 25%;
+    left: 15%;
+    width: 400px;
+    height: 5px;
+    background-color: var(--white-1);
+}
+
+.detail-4__bottom img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 600px;
+}
+
+.detail-4__center--item .detail-4__content {
+    width: 50%;
+}

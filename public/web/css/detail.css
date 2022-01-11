@@ -1,0 +1,360 @@
+/* Detail-1 */
+
+.detail-1 {
+    background-color: var(--blue-4);
+}
+
+.detail-1 p {
+    color: var(--black-4)
+}
+
+
+/* Detail-2 */
+
+.detail-2__top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.detail-2__top--name h3 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.detail-2__top--price h4 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.detail-2__top--price p {
+    text-align: right;
+}
+
+.detail-2__content--detail img {
+    width: 80%;
+    margin: 30px auto;
+}
+
+.detail-2__content--detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.detail-2__content--detail p {
+    font-size: 3rem;
+    position: absolute;
+    bottom: 0;
+    left: 45%;
+}
+
+.detail-2__content--carts {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.detail-2__content--cart {
+    padding: 1rem;
+    border: 2px solid var(--black-2);
+    margin: 1rem;
+}
+
+.detail-2__content--logo {
+    width: 210px;
+    border: 2px solid var(--black-1);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 30px;
+    margin: 20px auto;
+}
+
+.detail-2__logo {
+    width: 30px;
+    height: 30px;
+    background-image: linear-gradient(to bottom right, var(--red-1), var(--blue-4));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.detail-2__logo img {
+    width: 20px;
+    height: 20px;
+}
+
+.detail-2__content--logo p {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.detail-3 {
+    background-color: var(--black-2);
+}
+
+.detail-3__header h5 {
+    color: var(--black-1);
+    text-align: center;
+}
+
+.detail-3__header-actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.detail-3__header-actions--item {
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    background-color: var(--black-1);
+    color: var(--white-1);
+    margin: 1rem;
+    border-radius: 30px;
+}
+
+.detail-3__header-actions--item--red {
+    background-color: var(--red-1);
+}
+
+.detail-3__header-actions--item--blue {
+    background-color: var(--blue-4);
+}
+
+.detail-3__tag .tags .tag--item {
+    color: var(--black-1);
+    font-size: 1.5rem;
+    position: relative;
+}
+
+.detail-3__content {
+    width: 100%;
+    background-color: var(--white-1);
+    height: 100px;
+    border-radius: 3px;
+}
+
+.detail-4 {
+    background-color: var(--blue-4);
+}
+
+.detail-4__top--content {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+}
+
+.detail-4__top--content--item {
+    text-align: center;
+    padding: 5px
+}
+
+.detail-4__top--content--item--1 {
+    grid-column: 1;
+    grid-row: 2;
+    text-align: left;
+}
+
+.detail-4__top--content--item--2 {
+    grid-column: 2 / span 2;
+    grid-row: 2/ span 1;
+}
+
+.detail-4__top--content--item--3 {
+    grid-column: 4 / span 2;
+    grid-row: 1/ span 2;
+}
+
+.detail-4__top--content--item--4 {
+    grid-column: 1/span 2;
+    grid-row: 3;
+    text-align: right
+}
+
+.detail-4__top--content--item--5 {
+    grid-column: 3/span 3;
+    grid-row: 3;
+}
+
+.detail-4__content {
+    color: var(--white-1);
+}
+
+.detail-4__top--content--item--4 .detail-4__content p {
+    width: 400px;
+    float: right;
+    text-align: left;
+}
+
+.detail-4__title h4 {
+    color: var(--white-1);
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.detail-4__bottom-content {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+}
+
+.detail-4__bottom-content--item {
+    padding: 20px;
+    padding: 5px
+}
+
+.detail-4__bottom-content--item--1 {
+    grid-column: 1 / span 3;
+    grid-row: 1;
+}
+
+.detail-4__bottom-content--item--1 img {
+    float: right;
+}
+
+.detail-4__bottom-content--item--2 {
+    grid-column: 4 / span 2;
+    grid-row: 1;
+}
+
+.detail-4__bottom-content--item--3 {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+}
+
+.detail-4__bottom-content--item--4 {
+    grid-column: 3/ span 2;
+    grid-row: 2 / span 2;
+}
+
+.detail-4__bottom-content--item--5 {
+    grid-column: 5;
+    grid-row: 2;
+}
+
+.detail-4__bottom-content--item--2 .detail-4__content p {
+    width: 400px;
+    float: left;
+    text-align: left;
+}
+
+.detail-4__center--content {
+    display: flex;
+    flex-direction: row;
+    margin: 40px 0;
+}
+
+.detail-4__center--content--left {
+    margin: 40px;
+}
+
+.detail-5 {
+    background-color: var(--black-3);
+}
+
+.detail-5__title h2 {
+    text-align: center;
+    padding: 20px;
+    font-size: 2.5rem;
+}
+
+.detail-5__content-map {
+    width: 60%;
+    height: 400px;
+    background-color: var(--white-1);
+    margin: 30px auto;
+    padding: 30px;
+    border: 2px solid var(--black-1)
+}
+
+.detail-6_cars {
+    display: flex;
+    flex-direction: row;
+}
+
+.detail-6_cars--item {
+    width: 25%;
+    padding: 2rem;
+    margin: 1rem;
+    overflow: hidden;
+}
+
+.detail-6_cars--infor {
+    float: right;
+    position: relative;
+}
+
+.detail-6_cars--infor::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -200%;
+    width: 250px;
+    height: 1px;
+    background-color: var(--black-1);
+}
+
+.detail-6_cars--infor h2 {
+    font-size: 2rem;
+}
+
+.detail-6_cars--infor p {
+    font-size: 1.5rem;
+    opacity: 0.5;
+    text-align: right;
+}
+
+.detail-6_cars--item img {
+    width: 300px;
+}
+
+.detail-6_oto {
+    display: flex;
+    justify-content: center;
+}
+
+.detail-6-news {
+    padding: 120px 0;
+    display: flex;
+    align-items: center;
+    background-color: var(--black-2);
+    justify-content: center;
+}
+
+.detail-6-news--item {
+    position: relative;
+    cursor: pointer;
+    background-color: var(--white-1)
+}
+
+.detail-6-news--item:hover .see-more {
+    background-color: var(--black-5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.detail-6-news--item .see-more a {
+    display: none;
+}
+
+.detail-6-news--item:hover .see-more a {
+    display: block;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--blue-4);
+    padding: 1rem 2rem;
+    color: var(--white-1);
+    border-radius: 30px;
+}
